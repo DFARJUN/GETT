@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- Created using Storyline 360 - http://www.articulate.com  -->
-  <!-- version: 3.38.21861.0 -->
+  <!-- version: 3.40.22208.0 -->
   <title>Gett - Raz &amp; Dor</title>
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, minimal-ui" />
@@ -12,21 +12,9 @@
     html, body { height: 100%; padding: 0; margin: 0 }
     #app { height: 100%; width: 100%; }
   </style>
-  <script src="lms/APIConstants.js" charset="utf-8"></script>
-        <script src="lms/Configuration.js" charset="utf-8"></script>
-        <script src="lms/UtilityFunctions.js" charset="utf-8"></script>
-        <script src="lms/SCORM2004Functions.js" charset="utf-8"></script>
-        <script src="lms/SCORMFunctions.js" charset="utf-8"></script>
-        <script src="lms/AICCFunctions.js" charset="utf-8"></script>
-        <script src="lms/NONEFunctions.js" charset="utf-8"></script>
-        <script src="lms/LMSAPI.js" charset="utf-8"></script>
-        <script src="lms/API.js" charset="utf-8"></script>
-
-        <script>
-          strContentLocation = "story.html";
-          window.scormdriver_content = window;
-          function LoadContent(){}
-        </script>
+  
+        <script src="lms/scormdriver.js" charset="utf-8"></script>
+      
   <script>window.THREE = { };</script>
 </head>
 <body style="background: #282828" class="cs-HTML theme-unified">
@@ -51,6 +39,7 @@
 
       lmsPresent: true,
       tinCanPresent: false,
+      cmi5Present: false,
       aoSupport: false,
       scale: 'noscale',
       captureRc: false,
@@ -63,8 +52,8 @@
       productChannel: 'stable',
       publishSource: 'storyline',
       aid: 'auth0|5aa62662d1c0524a85ac0349',
-      cid: '2bf4e624-bfe4-42fe-b513-724a703e1456',
-      playerVersion: '3.38.21861.0',
+      cid: 'fe794979-0b93-4199-a2ec-a6dcf777d878',
+      playerVersion: '3.40.22208.0',
       maxIosVideoElements: 5,
 
       
@@ -130,7 +119,7 @@
     var doc = document, loader = doc.body.querySelector('.slide-loader'); [ 1, 2, 3 ].forEach(function(n) { var d = doc.createElement('div'); d.style.backgroundColor = window.globals.preloaderColor; d.classList.add('mobile-loader-dot'); d.classList.add('dot' + n); loader.appendChild(d); });
   </script>
 
-  <div class="mobile-load-title-overlay">
+  <div class="mobile-load-title-overlay" style="display: none">
     <div class="mobile-load-title">Gett - Raz &amp; Dor</div>
   </div>
 
@@ -143,9 +132,7 @@
     }
   </script>
 
-  <iframe name="AICCComm" src="lms/AICCComm.html" style="display:none;"></iframe>
-        <iframe name="rusticisoftware_aicc_results" src="lms/blank.html" style="display:none;"></iframe>
-        <iframe name="NothingFrame" src="lms/blank.html" style="display:none;"></iframe>
+  
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix />
 </body>
